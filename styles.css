@@ -1,0 +1,197 @@
+html{
+    color: #565759;
+}
+
+body{
+    font-family: "Century Gothic";
+    border: darkgrey solid;
+    margin: 2% 5% 2% 5%;
+    padding: 5% 10%;
+    text-align: center;
+
+
+}
+
+img.logo{
+    display:block;
+    margin: 0 auto;
+    width: 250px;
+
+}
+
+h1{
+    font-family: "Century Gothic";
+    text-align: center;
+
+
+
+}
+
+h4{
+    font-family: "Lucida Handwriting";
+    color: darkgrey;
+    text-align: center;
+
+}
+
+
+
+p{
+    font-weight: 900;
+    font-size: x-large;
+    line-height: 150%;
+    text-align: center;
+
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+li{
+    display:inline;
+    line-height: 300%;
+    white-space: nowrap;
+
+}
+
+a:link{
+    text-decoration: none;
+}
+
+
+
+
+#entername{
+    background-color: rgba(45, 97, 192, 0.33);
+
+    padding: 10% 10% 10% 10%;
+    margin: 5% auto 5% auto;
+    border: 20px solid;
+    border-radius: 300px;
+    -moz-border-radius: 300px;
+    -webkit-border-radius: 300px;
+    font-weight: 900;
+    font-size: x-large;
+    line-height: 100%;
+
+}
+
+#quiz{
+    /*display:none;*/
+}
+
+
+#quiz.question{
+
+    width: 40%;
+    padding: 10% 10% 10% 10%;
+    margin: 10% auto 10% auto;
+    font-weight: 900;
+    font-size: large;
+    line-height: 100%;
+
+
+
+}
+
+
+
+.question{
+    background-color: rgba(45, 97, 192, 0.33);
+
+
+
+}
+
+legend{
+    font-weight: 900;
+    font-size: larger;
+    background-color: rgba(255, 90, 159, 1);
+    border: thick solid;
+    opacity: 1;
+
+}
+
+#radiobutton, #checkbox{
+    text-align: left;
+    margin: 5% 20%;
+    line-height: 200%;
+
+}
+
+button{
+    border:solid 10px greenyellow;
+    border-right: solid 10px yellow;
+    border-left: solid 10px yellow;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: darkgrey;
+    padding: 3% 9%;
+    font-size: x-large;
+    font-weight: 900;
+    color: #565759;
+    margin-bottom: 10%;
+
+
+
+}
+
+
+#contactme{
+    text-align: center;
+}
+
+
+
+.facebookfont{
+    background-color:#3b5998;
+    color: white;
+    font-family:"Lucida Grande";
+    font-weight: bold;
+    font-size: 100%;
+    padding: 2%;
+
+
+}
+
+
+.instagramfont{
+    color: #703720;
+    background-color: white;
+    font-family: "lobster";
+    font-weight: 900;
+    font-size: 110%;
+    font-stretch: ultra-expanded;
+    padding: 2%;
+
+}
+
+#googlefont{
+    font-family: Futura;
+    font-size: 120%;
+    font-weight: 100;
+    background-color: white;
+    letter-spacing:.15em;
+    padding: 2%;
+
+}
+
+.googlefont1, .googlefont4{
+    color: blue;
+}
+
+.googlefont2, .googlefont6{
+    color: red;
+}
+
+.googlefont3{
+    color: yellow;
+}
+
+.googlefont5{
+    color: limegreen;
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link href="styles.css" type="text/css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<img src="images/face.png" alt="A picture of my face." class="logo">
+<h1>How Well Do You Know Me?</h1>
+
+<h4>Don't worry if you fail, at least you'll know me better by the end of this quiz!</h4>
+
+
+
+
+
+
+<div id="entername">
+    <p>Enter your name below and let's begin!
+        </br>
+        <input type="text" name="name" placeholder="Your name here"/>
+        <input type="button" value="Submit"/>
+    </p>
+</div>
+
+
+<div id="quiz">
+    <fieldset class="question" id="question1">
+        <legend>Question 1:</legend>
+        <p>What city was I born in?</p>
+        <br/>
+        <div id="radiobutton">
+            <input type="radio" name="city" value="Plano, Texas"/>Plano, Texas
+            <br/>
+            <input type="radio" name="city" value="Taipei, Taiwan"/>Taipei, Taiwan
+            <br/>
+            <input type="radio" name="city" value="San Jose, California"/>San Jose, California
+            </br>
+        </div>
+        <button class="button">NEXT</button>
+    </fieldset>
+    <fieldset class="question" id="question2">
+        <legend>Question 2:</legend>
+        <p>What college did I graduate from?</p>
+        <br/>
+        <div id="radiobutton">
+            <input type="radio" name="college" value="San Jose State University"/>San Jose State University
+            <br/>
+            <input type="radio" name="college" value="University of California, San Diego"/>University of California, San Diego
+            <br/>
+            <input type="radio" name="college" value="Stanford University"/>Stanford University
+        </div>
+        <button class="button">NEXT</button>
+    </fieldset>
+    <fieldset class="question" id="question3">
+        <legend>Question 3:</legend>
+        <p>What kind of dogs do I have? (Hint: I have two dogs, who are different breeds. So please select two in order to continue with the quiz!</p>
+        <br/>
+        <div id="checkbox">
+            <input type="checkbox" name="college" value="Maltese"/>Maltese
+            <br/>
+            <input type="checkbox" name="college" value="Yorkie"/>Yorkie
+            <br/>
+            <input type="checkbox" name="college" value="Corgi"/>Corgi
+            </br>
+            <input type="checkbox" name="college" value="Shih-Tzu"/>Shih-Tzu
+            </br>
+            <input type="checkbox" name="college" value="Daschund"/>Daschund
+            </br>
+            <input type="checkbox" name="college" value="Bulldog"/>Bulldog
+        </div>
+        <button class="button">NEXT</button>
+    </fieldset>
+    <fieldset class="question" id="question4">
+        <legend>Question 4:</legend>
+        <p>What is my favorite TV show of all time?</p>
+        <br/>
+        <div id="radiobutton">
+            <input type="radio" name="show" value="The Big Bang Theory"/>The Big Bang Theory
+            <br/>
+            <input type="radio" name="show" value="Friends"/>Friends
+            <br/>
+            <input type="radio" name="show" value="The Mindy Project"/>The Mindy Project
+        </div>
+        <button class="button">NEXT</button>
+    </fieldset>
+
+</div>
+
+
+
+<div id="contactme">
+    <ul>
+        <li><a href="mailto:jenniferlaurasha@gmail.com?body=I%20came%20from%20your%20website!" id="googlefont">
+            <span class="googlefont1">Se</span><span class="googlefont2">nd </span>
+            <span class="googlefont3">me </span>
+            <span class="googlefont4">an </span>
+            <span class="googlefont5">em</span><span class="googlefont6">ail</span></a></li>
+        <li><a href="http://www.facebook.com/jlsha" target="_blank"><span class="facebookfont">Add me on facebook</span></a></li>
+        <li><a href="https://www.instagram.com/jlsha/" target="_blank"><span class="instagramfont">Follow me on Instagram</span></a></li>
+    </ul>
+</div>
+<script src="quiz.js" type="text/javascript"></script>
+</body>
+</html>

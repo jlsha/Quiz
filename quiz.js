@@ -67,16 +67,10 @@ for (var i = 0; i < nextButtons.length; i++) {
         parent.style.display = "none";
         var nextQuestion = parent.nextSibling.nextSibling;
         nextQuestion.style.display = "block";
+        var userScore = document.getElementById("welcomeScore").innerHTML="Your score: ";
         userScore();
     }, false)
 }
-
-
-
-
-
-
-
 
 
 

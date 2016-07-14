@@ -35,6 +35,15 @@ h4{
 }
 
 
+#welcomeScore{
+    background-color: rgba(235, 156, 238, 0.54);
+    margin-bottom:5%;
+    font-weight: 900;
+    font-size: large;
+    line-height: 150%;
+
+
+}
 
 p{
     font-weight: 900;

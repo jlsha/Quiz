@@ -28,12 +28,17 @@ var typedName = document.getElementById("entername").getElementsByTagName("input
 
 var submitName = document.getElementById("entername").getElementsByTagName("input")[1];
 
+function welcomeUser () {
+    var userNameEntered = document.getElementById("entername").getElementsByTagName("input")[0].value;
+    document.getElementById("welcomeScore").innerHTML="Welcome, " + userNameEntered + "!";
+}
 
 submitName.addEventListener("click", function(){
     if(typedName.value.length>0){
         document.getElementById("entername").style.display="none";
         allQuestions[0].style.display = "block";
         allQuestions[0].getElementsByTagName("button")[0].style.display = "none";
+        welcomeUser();
 
     }
     else {
@@ -62,8 +67,18 @@ for (var i = 0; i < nextButtons.length; i++) {
         parent.style.display = "none";
         var nextQuestion = parent.nextSibling.nextSibling;
         nextQuestion.style.display = "block";
+        userScore();
     }, false)
 }
+
+
+
+
+
+
+
+
+
 
 
 for(var x=0; x<allQuestions.length; x++){

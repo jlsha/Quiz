@@ -9,8 +9,9 @@ window.onload = function(){
 
 
 
-var allQuestions = document.querySelectorAll(".question");
+var allQuestions = document.getElementsByClassName("question");
 
+console.log(allQuestions);
 
 
 function hideAllQuestions (){
@@ -52,7 +53,6 @@ submitName.addEventListener("click", function(){
 
 typedName.addEventListener("keyup", function(event){
     if(event.which == 13){
-        event.preventDefault();
         submitName.click();
     } else {}
 }, false);
@@ -60,17 +60,31 @@ typedName.addEventListener("keyup", function(event){
 
 
 var nextButtons = document.getElementsByClassName("button");
-for (var i = 0; i < nextButtons.length; i++) {
-    var currentButton = nextButtons[i];
+for (var z = 0; z < nextButtons.length; z++) {
+    var currentButton = nextButtons[z];
     currentButton.addEventListener('click', function(event) {
         var parent = event.target.parentElement;
         parent.style.display = "none";
         var nextQuestion = parent.nextSibling.nextSibling;
         nextQuestion.style.display = "block";
-        var userScore = document.getElementById("welcomeScore").innerHTML="Your score: ";
-        userScore();
+        
+        
+
+        /**var numberCorrect = 0;
+         var userScore = document.getElementById("welcomeScore").innerHTML = "Your score: " + numberCorrect;
+         var currentQuestionChoices = event.target.previousSibling.getElementsByTagName("input");
+         for (var w = 0; w < currentQuestionChoices.length; w++){
+            if (currenQuestionChoices[w].checked == 0) {
+                alert("hi");
+            }else{userScore()}}}**/
+
     }, false)
+    
 }
+
+
+
+var answeredCorrect = 0;
 
 
 
@@ -79,12 +93,14 @@ for(var x=0; x<allQuestions.length; x++){
     if(x!==2){
         var questionChoices = allQuestions[x].getElementsByTagName("input");
         for (var i = 0; i<questionChoices.length; i++){
-            currentQuestionChoice = questionChoices[i];
+            var currentQuestionChoice = questionChoices[i];
             currentQuestionChoice.addEventListener("click",function(event) {
                 var buttonBelow = event.target.parentElement.parentElement.lastElementChild;
                 buttonBelow.style.display = "inline";
                 var nextQuestionButton = event.target.parentElement.parentElement.nextSibling.nextSibling.lastElementChild;
                 nextQuestionButton.style.display = "none";
+                
+
             },false)
         }
     }else{
@@ -97,8 +113,7 @@ for(var x=0; x<allQuestions.length; x++){
                     y++
                 } else {
                     y--
-                }
-                ;
+                };
                 var buttonBelow = event.target.parentElement.parentElement.lastElementChild;
                 if (y == 2) {
                     buttonBelow.style.display = "inline";
@@ -110,4 +125,44 @@ for(var x=0; x<allQuestions.length; x++){
             }, false)
         }
     }}
+
+
+var answerKey = ["Plano, Texas","University of California, San Diego","MalteseYorkie","Friends"];
+var numberCorrect = 0;
+
+for(var v=0; v<allQuestions.length; v++){
+    (function(correctAnswer){
+        var nextButton = document.getElementsByClassName("question")[v].lastElementChild;
+        nextButton.addEventListener("click",function(event){
+            var userAnswer;
+            for (var x = 0; x < event.target.previousSibling.previousSibling.getElementsByTagName("input").length; x++) {
+                if (event.target.previousSibling.previousSibling.getElementsByTagName("input")[x].checked) {
+                    if (userAnswer == undefined) {
+                        userAnswer = event.target.previousSibling.previousSibling.getElementsByTagName("input")[x].value
+                    } else {
+                        userAnswer += event.target.previousSibling.previousSibling.getElementsByTagName("input")[x].value
+                    }
+
+                    var userScore = function(){document.getElementById("welcomeScore").innerHTML = "Your score: " + numberCorrect};
+                    if (userAnswer === correctAnswer) {
+                        numberCorrect++;
+                        userScore();
+                    } else {
+                        userScore();
+                    }
+
+
+
+
+
+                }
+
+            }
+            
+        })
+        
+    })(answerKey[v]);
+}
+
+
 
